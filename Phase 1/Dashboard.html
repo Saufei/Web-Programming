@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dime - Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="Chart.bundle.js"></script>
+	<script src="utils.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse" id="bs-example-navbar">
+			<ul class="nav navbar-nav">
+				<a href="Dashboard.html"><img src="DimeLogo.png" alt="Logo Pic" width="300" style="padding-left:10px;padding-top:10px;"></a>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Target money: RM50000</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="headerDivider"></div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Saving: RM21000</p>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="signout">
+						<a href="index.html"><i class="fa fa-share-square-o" style="font-size:48px;color:red"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div>
+		<div class="row">
+			<div class="col-xs-2" style="width:160px;">
+				<div class="sidenav">
+					<div class="temp">
+						<img src="User.png" class="img-responsive" alt="Profile Pic" width="1000" height="1000">
+					</div>
+					<h4 style="text-align:center; color:white;"><strong>User</strong></h4>
+				</div>
+				<br>
+				<div class="sidenav">
+					<div class="active">
+						<a href="">Dashboard</a>
+					</div>
+					<div>
+						<a href="Goals.html">Manage Goals</a>
+					</div>
+					<div>
+						<a href="Expenses.html">Manage Expenses</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-9" style="margin-left:20px;">
+				<div class="box">
+					<div class="child-div">
+						<br>
+						<div class="jumbotron">
+							<h2> Summary of Expenses by Category </h2>
+							<div id="canvas-holder" style="width:100%">
+								<canvas id="chart-area"></canvas>
+							</div>
+							<script>
+								var randomScalingFactor = function() {
+									return Math.round(Math.random() * 100);
+								};
+
+								var config = {
+									type: 'pie',
+									data: {
+										datasets: [{
+											data: [
+												randomScalingFactor(),
+												randomScalingFactor(),
+												randomScalingFactor(),
+												randomScalingFactor(),
+												randomScalingFactor(),
+											],
+											backgroundColor: [
+												window.chartColors.red,
+												window.chartColors.orange,
+												window.chartColors.yellow,
+												window.chartColors.green,
+												window.chartColors.blue,
+											],
+											label: 'Dataset 1',
+											label: 'Dataset 2'
+										}],
+										labels: [
+											'Groceries',
+											'Food',
+											'Transport',
+											'Shopping',
+											'Entertainment'
+										]
+									},
+									options: {
+										responsive: true
+									}
+								};
+
+								window.onload = function() {
+									var ctx = document.getElementById('chart-area').getContext('2d');
+									window.myPie = new Chart(ctx, config);
+								};
+
+								var colorNames = Object.keys(window.chartColors);
+							</script>
+						</div>
+
+						<div class="jumbotron">
+							<h2>Budget VS Actual Expenses </h2>
+
+							<canvas id="myChart"></canvas>
+
+							<script>
+							var ctx = document.getElementById("myChart").getContext("2d");
+
+							var myChart = new Chart(ctx, {
+								type: 'bar',
+								data: {
+									labels: ["groceries", "food", "transport", "shopping", "Entertainment", "Orange"],
+									datasets: [{
+										label: 'Budget',
+										data: [12, 19, 3, 5, 2, 3],
+										backgroundColor: [
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(255, 99, 132, 0.2)',
+											'rgba(255, 99, 132, 0.2)'
+										],
+										borderColor: [
+											'rgba(255,99,132,1)',
+											'rgba(54, 162, 235, 1)',
+											'rgba(255, 206, 86, 1)',
+											'rgba(75, 192, 192, 1)',
+											'rgba(153, 102, 255, 1)',
+											'rgba(255, 159, 64, 1)'
+										],
+										
+										borderWidth: 1,},{
+											label: 'Actual Expenses',
+											
+											data: [3, 2, 5, 3, 19, 12],
+											backgroundColor: [
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(255, 206, 86, 0.2)'
+										],
+										borderColor: [
+											'rgba(255, 159, 64, 0.2)',
+											'rgba(153, 102, 255, 0.2)',
+											'rgba(75, 192, 192, 0.2)',
+											'rgba(255, 206, 86, 0.2)',
+											'rgba(54, 162, 235, 0.2)',
+											'rgba(255, 99, 132, 0.2)'
+										],
+										
+										borderWidth: 1,
+										
+										}
+									
+									
+									
+									]
+								},
+								options: {
+									scales: {
+									
+										xAxes: [{
+														stacked: true,
+														beginAtZero:true,
+													}],
+									
+										yAxes: [{
+											ticks: {
+												
+													stacked: true,
+												beginAtZero:true
+														
+														
+											}
+										}]
+									}
+								}
+							});
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+</body>
+<footer>
+  	<h4>Copyright &copy; 2018 Dime <br> <a href="mailto:dime@gmail.com"> dime@gmail.com </a> </i></small></h4>
+</footer>
+
+</html> 

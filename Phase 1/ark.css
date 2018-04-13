@@ -1,0 +1,199 @@
+h1{
+ color: #00108E;
+}
+footer { background-color: #0C090A;
+    color: white;
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 10px;
+	border-top: 2px #221811 solid;
+}
+
+.fontpicture{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    position: relative;
+   
+}
+header{
+    position:relative;
+    width:auto;
+    margin-top: 0;
+    height: 350px;
+    background-image:url(mainimage.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.95;
+}
+.main-image{
+    width:1600px;
+    height: 350px;
+    opacity: 0.95;
+}
+.btn{
+   position:relative;
+    color: #fff;
+    background-color: #00108E;
+    border-color: #00108E; 
+}
+.btn-header {
+    position:absolute;
+    color: #fff;
+    background-color: #00108E;
+    border-color: #00108E;
+    top: 195px;
+    left:250px;
+
+}
+.btn-header2 {
+    position: absolute;
+    color: #fff;
+    background-color: #00108E;
+    border-color: #00108E;
+    top: 195px;
+    left:350px;
+
+}
+
+.image{   
+    position:relative;
+    
+    min-width:1260px;
+    width: 100%;
+    height: 450px;
+    opacity: 0.95;
+}
+navbar {
+    margin-bottom: 20px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    
+}
+
+
+.text-block {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -10%);
+  color: white;
+    
+}
+
+#container{
+    min-height: 100%;
+}
+.middle{
+    margin-left: 80px;
+}
+.middlebutton{
+    margin-left: 110px;
+}
+.icon{
+    height: 120px;
+    width: 120px;
+}
+#box {
+    border-radius: 25px;
+    background: #DCDCDC;
+    padding: 20px; 
+    width: 320px;
+    height: 660px;  
+    opacity: 0.99;
+    position: absolute;
+    
+}
+#box2 {
+    border-radius: 25px;
+    background: #F8F8F8;
+    padding: 20px; 
+    width: 350px;
+    height: 450px;  
+    opacity: 0.99;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+   
+}
+
+.register{
+    background-image: url(Discover.jpg);
+    opacity: 0.86;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 920px;
+    position: relative;
+    bottom: 10px;
+    
+}
+
+
+.login{
+    background-image: url(login.jpg);
+    opacity: 0.86;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 920px;
+    position: relative;
+    bottom: 10px;
+    
+}
+
+.slight{
+    margin-left: 7%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+
+
+
+.bottom-right {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.jar{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.child2 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -20%);
+}
+.header-main-font{
+     left: 250px;
+    top: 80px;
+}

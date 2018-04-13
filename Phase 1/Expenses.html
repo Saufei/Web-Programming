@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dime - Manage Expenses</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse" id="bs-example-navbar">
+			<ul class="nav navbar-nav">
+				<a href="Dashboard.html"><img src="DimeLogo.png" alt="Logo Pic" width="300" style="padding-left:10px;padding-top:10px;"></a>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Target money: RM50000</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="headerDivider"></div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Saving: RM21000</p>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="signout">
+						<a href="index.html"><i class="fa fa-share-square-o" style="font-size:48px;color:red"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div>
+		<div class="row">
+			<div class="col-xs-2" style="width:160px;">
+				<div class="sidenav">
+					<div class="temp">
+						<img src="User.png" class="img-responsive" alt="Profile Pic" width="1000" height="1000">
+					</div>
+					<h4 style="text-align:center; color:white;"><strong>User</strong></h4>
+				</div>
+				<br>
+				<div class="sidenav">
+					<div>
+						<a href="Dashboard.html">Dashboard</a>
+					</div>
+					<div>
+						<a href="Goals.html">Manage Goals</a>
+					</div>
+					<div class="active">
+						<a href="">Manage Expenses</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-9" style="margin-left:20px;">
+				<div class="box">
+					<div class="row">
+						<div class="container">
+							<form action="https://docs.google.com/forms/d/e/1FAIpQLSc0yJocTtpfNktWQ07SjH081bMy2I-HLVZo2KWlEKfcUxEpRw/formResponse"
+								target="_self"
+								id="bootstrapForm"
+								method="POST">
+								<fieldset>
+									<h2>Manage Daily Expanse<br><small></small></h2>
+								</fieldset>
+
+								<fieldset>
+									<legend for="858509358">Date</legend>
+									<div class="form-group">
+										<input type="date" id="1534421248_date" placeholder="4/9/2018" class="form-control" required>
+									</div>
+								</fieldset>
+
+								<fieldset>
+									<legend for="616394252">Amount</legend>
+									<div class="form-group">
+										<input id="85546554" type="text" name="entry.85546554" class="form-control" required>
+									</div>
+								</fieldset>
+
+								<fieldset>
+									<legend for="1843972191">Category</legend>
+									<div class="form-group">
+										<select id="1843972191" name="entry.407845675" class="form-control">
+											<option value="Groceries">Groceries</option>
+											<option value="Food">Food</option>
+											<option value="Transport">Transport</option>
+											<option value="Shopping">Shopping</option>
+											<option value="Entertainment">Entertainment</option>
+										</select>
+									</div>
+								</fieldset>
+
+								<input type="hidden" name="fvv" value="1">
+								<input type="hidden" name="fbzx" value="2598193902518743137">
+								<input type="hidden" name="pageHistory" value="0">
+
+								<input class="btn btn-primary" type="submit" value="Submit">
+								<input class="btn btn-primary" type="submit" value="Edit">
+								<input class="btn btn-primary" type="submit" value="Delete">
+							</form>
+							<br>
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="container">
+										<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGZoNYGes7StU28O6eSKTSe_L7P_pNPlntGr4FGonYzh7E06M1AhCYHvW9rUsrfpaSXfn5eWFi-ggk/pubhtml?gid=368058953&amp;single=true&amp;widget=true&amp;headers=false" width="457" height="350"></iframe>
+									</div>
+								</div>
+
+								<div class="col-xs-6">
+									<div class="container">
+										<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGZoNYGes7StU28O6eSKTSe_L7P_pNPlntGr4FGonYzh7E06M1AhCYHvW9rUsrfpaSXfn5eWFi-ggk/pubhtml?gid=228850988&amp;single=true&amp;widget=true&amp;headers=false" width="306" height="285"></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<script>
+						$('#bootstrapForm').submit(function (event) {
+							event.preventDefault()
+							var extraData = {}
+							{
+								/* Parsing input date id=1534421248 */
+								var dateField = $("#1534421248_date").val()
+								var timeField = $("#1534421248_time").val()
+								let d = new Date(dateField)
+								if (!isNaN(d.getTime())) {
+									extraData["entry.1534421248_year"] = d.getFullYear()
+									extraData["entry.1534421248_month"] = d.getMonth() + 1
+									extraData["entry.1534421248_day"] = d.getUTCDate()
+								}
+								if (timeField && timeField.split(':').length >= 2) {
+									let values = timeField.split(':')
+									extraData["entry.1534421248_hour"] = values[0]
+									extraData["entry.1534421248_minute"] = values[1]
+								}
+							}
+							$('#bootstrapForm').ajaxSubmit({
+								data: extraData,
+								dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+								error: function () {
+									// Submit of form should be successful but JSONP callback will fail because Google Forms
+									// does not support it, so this is handled as a failure.
+									alert('Form Submitted. Thanks.')
+									// You can also redirect the user to a custom thank-you page:
+									// window.location = 'http://www.mydomain.com/thankyoupage.html'
+								}
+							})
+						})
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+
+</body>
+<footer>
+  	<h4>Copyright &copy; 2018 Dime <br> <a href="mailto:dime@gmail.com"> dime@gmail.com </a> </i></small></h4>
+</footer>
+</html> 

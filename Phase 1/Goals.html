@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dime - Manage Goals</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse" id="bs-example-navbar">
+			<ul class="nav navbar-nav">
+				<a href="Dashboard.html"><img src="DimeLogo.png" alt="Logo Pic" width="300" style="padding-left:10px;padding-top:10px;"></a>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Target money: RM50000</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="headerDivider"></div>
+					</div>
+				</li>
+				<li>
+					<div class="box" style="margin-top:20px">
+						<div class="sign">
+							<p>Total Saving: RM21000</p>
+						</div>
+					</div>
+				</li>
+				
+				<li>
+					<div class="signout">
+						<a href="index.html"><i class="fa fa-share-square-o" style="font-size:48px;color:red"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div>
+		<div class="row">
+			<div class="col-xs-2" style="width:160px;">
+				<div class="sidenav">
+					<div class="temp">
+						<img src="User.png" class="img-responsive" alt="Profile Pic" width="1000" height="1000">
+					</div>
+					<h4 style="text-align:center; color:white;"><strong>User</strong></h4>
+				</div>
+				<br>
+				<div class="sidenav">
+					<div>
+						<a href="Dashboard.html">Dashboard</a>
+					</div>
+					<div class="active">
+						<a href="">Manage Goals</a>
+					</div>
+					<div>
+						<a href="Expenses.html">Manage Expenses</a>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="col-xs-10" style="margin-left:20px;">
+				<div class="row">
+					<div class="col-xs-3">
+						<h1 style="margin-left:20px;"><strong>Manage Goals<strong></h1>
+					</div>
+					<div class="col-xs-7">
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn btn-primary btn-block" style="font-size:25px;" data-toggle="modal" data-target="#AddModal">Add</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="box">
+							<div class="table-responsive" style="margin:20px;">
+								<table class="table table-bordered">
+									<thead style="background-color: #1C4C75">
+										<tr>
+											<th>No.</th>
+											<th>Date Insert</th>
+											<th>Goals</th>
+											<th>Target Money</th>
+											<th>Plan</th>
+											<th>Target Date</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody style="background-color: #75A6C7">
+									  <tr>
+										<td>1</td>
+										<td>1 April 2018</td>
+										<td>Further studies in overseas</td>
+										<td>RM10000</td>
+										<td>Save RM500 per month</td>
+										<td>3 September 2018</td>
+										<td><button type="button" class="btn btn-warning btn-block" style="font-size:25px;" data-toggle="modal" data-target="#EditModal">Edit</button><button type="button" class="btn btn-danger btn-block" style="font-size:25px;" data-toggle="modal" data-target="#DeleteModal">Delete</button></td>
+									  </tr>
+									  <tr>
+										<td>2</td>
+										<td>1 April 2018</td>
+										<td>Travel the world</td>
+										<td>RM20000</td>
+										<td>Save RM500 per month</td>
+										<td>8 September 2020</td>
+										<td><button type="button" class="btn btn-warning btn-block" style="font-size:25px;" data-toggle="modal" data-target="#EditModal">Edit</button><button type="button" class="btn btn-danger btn-block" style="font-size:25px;" data-toggle="modal" data-target="#DeleteModal">Delete</button></td>
+									  </tr>
+									  <tr>
+										<td>3</td>
+										<td>1 April 2018</td>
+										<td>Buy a house</td>
+										<td>RM20000</td>
+										<td>Save RM500 per month</td>
+										<td>5 July 2022</td>
+										<td><button type="button" class="btn btn-warning btn-block" style="font-size:25px;" data-toggle="modal" data-target="#EditModal">Edit</button><button type="button" class="btn btn-danger btn-block" style="font-size:25px;" data-toggle="modal" data-target="#DeleteModal">Delete</button></td>
+									  </tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+
+<div class="modal fade" id="AddModal" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Add</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+				  <div class="form-group">
+					<label for="DateInsert" class="col-form-label">Date Insert:</label>
+					<input type="date" class="form-control">
+				  </div>
+				  <div class="form-group">
+					<label for="Goal" class="col-form-label">Goal:</label>
+					<textarea class="form-control"></textarea>
+				  </div>
+				  <div class="form-group">
+					<label for="TargetMoney" class="col-form-label">Target Money:</label>
+					<input type="number" name="quantity" min="1" max="99999999">
+				  </div>
+				  <div class="form-group">
+					<label for="Plan" class="col-form-label">Plan:</label>
+					<textarea class="form-control"></textarea>
+				  </div>
+				  <div class="form-group">
+					<label for="TargetDate" class="col-form-label">Target Date:</label>
+					<input type="date" class="form-control">
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success">Add</button>
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="modal fade" id="EditModal" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Edit</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+				  <div class="form-group">
+					<label for="DateInsert" class="col-form-label">Date Insert:</label>
+					<input type="date" class="form-control">
+				  </div>
+				  <div class="form-group">
+					<label for="Goal" class="col-form-label">Goal:</label>
+					<textarea class="form-control"></textarea>
+				  </div>
+				  <div class="form-group">
+					<label for="TargetMoney" class="col-form-label">Target Money:</label>
+					<input type="number" name="quantity" min="1" max="99999999">
+				  </div>
+				  <div class="form-group">
+					<label for="Plan" class="col-form-label">Plan:</label>
+					<textarea class="form-control"></textarea>
+				  </div>
+				  <div class="form-group">
+					<label for="TargetDate" class="col-form-label">Target Date:</label>
+					<input type="date" class="form-control">
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info">Done</button>
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="modal fade" id="DeleteModal" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Delete</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+				  <div class="form-group">
+					<label for="NoData" class="col-form-label">Delete this data ?</label>
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger">Delete</button>
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+    </div>
+</div>
+</body>
+<footer>
+  	<h4>Copyright &copy; 2018 Dime <br> <a href="mailto:dime@gmail.com"> dime@gmail.com </a> </i></small></h4>
+</footer>
+</html> 
